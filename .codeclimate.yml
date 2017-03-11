@@ -4,9 +4,14 @@ engines:
     enabled: true
   scss-lint:
     enabled: true
+  markdownlint:
+    enabled: true
 ratings:
   paths:
   - "**.js"
   - "**.scss"
+  - "**.md"
 exclude_paths:
 - "docs/"
+- "**.html"
+- "**.json"
