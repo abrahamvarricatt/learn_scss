@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var express = require('express');
 
 // Source file locations
 var HTML_SOURCES = ['src/html/*.html'];
@@ -23,4 +24,13 @@ gulp.task('watch', function() {
   gulp.watch(SCSS_SOURCES, ['styles']);
 });
 
-gulp.task('default', ['html', 'styles']);
+var server;
+gulp.task('server', function() {
+  server = express();
+  server.use(express.static('docs'));
+  server.listen(8000);
+});
+
+gulp.task('build', ['html', 'styles']);
+
+gulp.task('default', ['build', 'watch', 'server']);
