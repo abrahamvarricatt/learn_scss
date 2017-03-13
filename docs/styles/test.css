@@ -1,2 +1,25 @@
-.fab-text {
-  font-size: 2em; }
+#container {
+  width: 500px;
+  margin: 0px auto;
+}
+
+#container p {
+  font-family: Arial;
+  font-size: 13px;
+}
+
+#container h1 {
+  font-family: Tahoma;
+  font-size: 25px;
+}
+
+#container h2 {
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+#container {
+  width: 960px;
+  margin: 11 auto;
+  border: 1px solid red;
+}

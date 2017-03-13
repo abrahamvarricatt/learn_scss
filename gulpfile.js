@@ -15,7 +15,7 @@ gulp.task('html', function() {
 gulp.task('styles', function() {
   return gulp
     .src(SCSS_SOURCES)
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'expanded'}))
     .pipe(gulp.dest('docs/styles'));
 });
 
