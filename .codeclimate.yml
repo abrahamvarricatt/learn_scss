@@ -15,4 +15,5 @@ exclude_paths:
 - "docs/"
 - "**.html"
 - "**.json"
-- "styles/vendor/"
+- "src/styles/vendor/"
+- "src/styles/fonts/"
