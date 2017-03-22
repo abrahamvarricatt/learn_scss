@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-LightItalic-webfont.woff') format('woff');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Regular-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+}
+
+// A default font for everything
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
