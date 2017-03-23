@@ -9,3 +9,25 @@ $website-heading-border-color: #6600cc;
 // tags
 $tag-background: #fff;
 $tag-border: #000;
+
+
+// Extends
+
+// For anchor colors
+%anchor-color {
+
+  a {
+    text-decoration: none;
+  }
+
+  a:link {
+    border-bottom: 1px dashed $website-heading-color;
+    color: $website-heading-color;
+  }
+
+  a:visited {
+    border-bottom: 1px solid darken($website-heading-color, 20%);
+    color: darken($website-heading-color, 20%);
+  }
+
+}
