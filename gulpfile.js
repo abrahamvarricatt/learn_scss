@@ -14,7 +14,7 @@ const config = require('./config');
 
 // Source file locations
 var HTML_SOURCES = ['src/html/*.html'];
-var SCSS_SOURCES = ['src/styles/*.scss'];
+var SCSS_SOURCES = ['src/styles/**/*.scss'];
 var FONT_SOURCES = ['src/styles/fonts/*'];
 
 gulp.task('html', function() {

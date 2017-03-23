@@ -1,0 +1,25 @@
+body {
+  background-color: $website-background-color;
+}
+
+header {
+  margin: 20px;
+  padding-bottom: 10px;
+  border-bottom: 4px double $website-heading-border-color;
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    font-variant: small-caps;
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: $website-heading-color;
+    }
+  }
+  h3 {
+    margin-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
