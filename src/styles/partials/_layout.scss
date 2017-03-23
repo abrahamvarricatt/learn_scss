@@ -8,7 +8,7 @@ time {
 
 header {
   border-bottom: 4px double $website-heading-border-color;
-  margin: 20px;
+  margin: 5px;
   padding-bottom: 10px;
 
   h1 {
@@ -34,7 +34,7 @@ header {
 }
 
 .content {
-  margin: 20px;
+  margin: 5px;
 }
 
 article {
@@ -55,7 +55,7 @@ article {
     h4 {
       font-size: 12px;
       margin-bottom: 5px;
-      margin-top: -15px;
+      margin-top: -2px;
     }
 
     ul {
@@ -93,19 +93,7 @@ article {
 
   section {
 
-    a {
-      text-decoration: none;
-    }
-
-    a:link {
-      border-bottom: 1px dashed $website-heading-color;
-      color: $website-heading-color;
-    }
-
-    a:visited {
-      border-bottom: 1px solid darken($website-heading-color, 20%);
-      color: darken($website-heading-color, 20%);
-    }
+    @extend .anchor-color;
 
     p:last-child {
       display: inline-block;
@@ -130,5 +118,81 @@ article {
     min-width: 50px;  // enough for a finger tap, I think
     text-decoration: none;
   }
+
+}
+
+.article-list {
+  >section:last-child {
+    padding: 10px 0;
+    overflow: hidden;
+    border-top: 1px solid $website-heading-border-color;
+    border-bottom: 3px double $website-heading-border-color;
+    margin-bottom: 10px;
+
+    .prev-list:before {
+      content: '';
+      display: inline-block;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid $website-heading-border-color;
+    }
+
+    .prev-list {
+      float: left;
+      width: 49%;
+    }
+
+    .next-list {
+      border-left: 1px solid $website-heading-border-color;
+      float: right;
+      width: 50%;
+      text-align: right;
+    }
+
+    .next-list:after {
+      content: '';
+      display: inline-block;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid $website-heading-border-color;
+    }
+
+    a {
+      text-decoration: none;
+      color: $website-heading-color;
+    }
+
+  }
+
+}
+
+.nav-links {
+  clear: both;
+  text-align: center;
+  margin-bottom: 30px;
+
+  li {
+    padding: 5px 0;
+    font-variant: small-caps;
+    @extend .anchor-color;
+  }
+
+  li:last-child {
+    padding-top: 20px;
+
+    a {
+      color: $datetime-color;
+    }
+
+  }
+
+}
+
+.page-footer {
+  margin: 5px;
+  text-align: center;
+  font-size: 12px;
+
+  @extend .anchor-color;
 
 }
