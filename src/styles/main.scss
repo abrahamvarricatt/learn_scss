@@ -6,12 +6,12 @@ Built with SASS and Gulp
 
 
 // reset stylesheet
-@import "vendor/reset-emeyer";
+@import 'vendor/reset-emeyer';
 
 // modules - stuff which does not directly output CSS (eg: variables, mixins)
-@import "modules/variables";
+@import 'modules/variables';
 
 
 // partials - stuff which outputs CSS
-@import "partials/typography";
-@import "partials/layout";
+@import 'partials/typography';
+@import 'partials/layout';
