@@ -93,7 +93,7 @@ article {
 
   section {
 
-    @extend .anchor-color;
+    @extend %anchor-color;
 
     p:last-child {
       display: inline-block;
@@ -122,19 +122,20 @@ article {
 }
 
 .article-list {
-  >section:last-child {
-    padding: 10px 0;
-    overflow: hidden;
-    border-top: 1px solid $website-heading-border-color;
-    border-bottom: 3px double $website-heading-border-color;
-    margin-bottom: 10px;
 
-    .prev-list:before {
-      content: '';
-      display: inline-block;
-      border-top: 5px solid transparent;
+  >section:last-child {
+    border-bottom: 3px double $website-heading-border-color;
+    border-top: 1px solid $website-heading-border-color;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+
+    .prev-list::before {
       border-bottom: 5px solid transparent;
       border-right: 5px solid $website-heading-border-color;
+      border-top: 5px solid transparent;
+      content: '';
+      display: inline-block;
     }
 
     .prev-list {
@@ -145,21 +146,21 @@ article {
     .next-list {
       border-left: 1px solid $website-heading-border-color;
       float: right;
-      width: 50%;
       text-align: right;
+      width: 50%;
     }
 
-    .next-list:after {
-      content: '';
-      display: inline-block;
-      border-top: 5px solid transparent;
+    .next-list::after {
       border-bottom: 5px solid transparent;
       border-left: 5px solid $website-heading-border-color;
+      border-top: 5px solid transparent;
+      content: '';
+      display: inline-block;
     }
 
     a {
-      text-decoration: none;
       color: $website-heading-color;
+      text-decoration: none;
     }
 
   }
@@ -172,9 +173,9 @@ article {
   margin-bottom: 30px;
 
   li {
-    padding: 5px 0;
+    @extend %anchor-color;
     font-variant: small-caps;
-    @extend .anchor-color;
+    padding: 5px 0;
   }
 
   li:last-child {
@@ -189,10 +190,8 @@ article {
 }
 
 .page-footer {
+  @extend %anchor-color;
+  font-size: 12px;
   margin: 5px;
   text-align: center;
-  font-size: 12px;
-
-  @extend .anchor-color;
-
 }

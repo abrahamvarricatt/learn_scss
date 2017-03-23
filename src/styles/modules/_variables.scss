@@ -14,8 +14,8 @@ $tag-border: #000;
 // Extends
 
 // For anchor colors
-.anchor-color {
-  
+%anchor-color {
+
   a {
     text-decoration: none;
   }
