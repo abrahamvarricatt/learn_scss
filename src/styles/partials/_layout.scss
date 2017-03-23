@@ -41,6 +41,12 @@ article {
 
   header {
     border-bottom: 1px solid $website-heading-border-color;
+    padding-bottom: 2px;
+
+    h1 {
+      font-size: 30px;
+      margin: 0;
+    }
   }
 
   footer {
@@ -59,6 +65,51 @@ article {
 
     li {
       display: inline;
+    }
+
+  }
+
+  // Elements within articles
+
+  // Headings
+  h1 {
+    font-size: 24px;
+    font-variant: small-caps;
+    margin: 25px 0 5px;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-variant: small-caps;
+    margin: 15px 0 5px;
+  }
+
+  // Text stuff
+  p {
+    font-size: 16px;
+    line-height: 125%;
+    margin-bottom: 10px;
+  }
+
+  section {
+
+    a {
+      text-decoration: none;
+    }
+
+    a:link {
+      border-bottom: 1px dashed $website-heading-color;
+      color: $website-heading-color;
+    }
+
+    a:visited {
+      border-bottom: 1px solid darken($website-heading-color, 20%);
+      color: darken($website-heading-color, 20%);
+    }
+
+    p:last-child {
+      display: inline-block;
+      margin-bottom: 30px;
     }
 
   }
