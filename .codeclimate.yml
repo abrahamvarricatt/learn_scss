@@ -4,6 +4,9 @@ engines:
     enabled: true
   scss-lint:
     enabled: true
+    checks:
+      HexLength:
+        enabled: false
   markdownlint:
     enabled: true
 ratings:
