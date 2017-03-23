@@ -2,6 +2,10 @@ body {
   background-color: $website-background-color;
 }
 
+time {
+  color: #099422;
+}
+
 header {
   border-bottom: 4px double $website-heading-border-color;
   margin: 20px;
@@ -25,6 +29,53 @@ header {
     margin-top: 5px;
     text-align: center;
     text-transform: uppercase;
+  }
+
+}
+
+.content {
+  margin: 20px;
+}
+
+article {
+
+  header {
+    border-bottom: 1px solid $website-heading-border-color;
+  }
+
+  footer {
+    margin-bottom: 20px;
+
+    h4 {
+      margin-top: -15px;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    ul {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    li {
+      font-size: 10px;
+      padding: 3px 5px;
+      display: inline;
+      border: 1px dotted #000;
+      border-radius: 10px;
+      background-color: #fff;
+
+      a:link,
+      a:visited {
+        // color: $website-heading-color;
+        text-decoration: none;
+        min-width: 50px;  // enough for a finger tap, I think
+        display: inline-block;
+        color: darken($website-heading-color, 30%);
+      }
+
+    }
+
   }
 
 }
