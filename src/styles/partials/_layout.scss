@@ -6,15 +6,35 @@ time {
   color: $datetime-color;
 }
 
+.entire-page {
+  margin: 0 auto;
+  max-width: 600px;
+
+  @include tablet {
+    max-width: 900px;
+  }
+
+}
+
 header {
   border-bottom: 4px double $website-heading-border-color;
-  margin: 5px;
-  padding-bottom: 10px;
+  margin: $website-margin;
+  padding-bottom: $website-heading-bottom-padding;
+
+  @include tablet {
+    border-bottom: 8px double $website-heading-border-color;
+    margin: $website-margin * 3;
+    padding-bottom: $website-heading-bottom-padding * 2;
+  }
 
   h1 {
-    font-size: 32px;
+    font-size: $website-heading-font-size;
     font-variant: small-caps;
     text-align: center;
+
+    @include tablet {
+      font-size: $website-heading-font-size * 2;
+    }
 
     a:link,
     a:visited {
@@ -25,16 +45,25 @@ header {
   }
 
   h3 {
-    font-size: 12px;
-    margin-top: 5px;
+    font-size: $website-subheading-font-size;
+    margin-top: 2px;
     text-align: center;
     text-transform: uppercase;
+
+    @include tablet {
+      font-size: $website-subheading-font-size * 2;
+    }
   }
 
 }
 
 .content {
-  margin: 5px;
+  margin: $website-margin;
+
+  @include tablet {
+    margin: $website-margin * 3;
+  }
+
 }
 
 article {
@@ -43,24 +72,45 @@ article {
     border-bottom: 1px solid $website-heading-border-color;
     padding-bottom: 2px;
 
+    @include tablet {
+      border-bottom: 4px solid $website-heading-border-color;
+    }
+
     h1 {
-      font-size: 30px;
+      font-size: $article-heading-font-size;
       margin: 0;
+
+      @include tablet {
+        font-size: $article-heading-font-size * 2;
+      }
     }
   }
 
   footer {
-    margin-bottom: 20px;
+    margin-bottom: $article-taglist-margin-bottom;
+
+    @include tablet {
+      margin-bottom: $article-taglist-margin-bottom * 2;
+    }
 
     h4 {
-      font-size: 12px;
+      font-size: $website-subheading-font-size;
       margin-bottom: 5px;
       margin-top: -2px;
+
+      @include tablet {
+        font-size: $website-subheading-font-size * 2;
+        margin-top: -25px;
+      }
     }
 
     ul {
       margin-top: 10px;
       text-align: center;
+
+      @include tablet {
+        margin-top: 20px;
+      }
     }
 
     li {
@@ -76,12 +126,22 @@ article {
     font-size: 24px;
     font-variant: small-caps;
     margin: 25px 0 5px;
+
+    @include tablet {
+      font-size: 54px;
+      margin: 70px 0 20px;
+    }
   }
 
   h2 {
     font-size: 22px;
     font-variant: small-caps;
     margin: 15px 0 5px;
+
+    @include tablet {
+      font-size: 44px;
+      margin: 50px 0 10px;
+    }
   }
 
   // Text stuff
@@ -89,6 +149,11 @@ article {
     font-size: 16px;
     line-height: 125%;
     margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
   }
 
   section {
@@ -108,8 +173,16 @@ article {
   background-color: $tag-background;
   border: 1px dotted $tag-border;
   border-radius: 10px;
-  font-size: 10px;
+  font-size: $article-tag-font-size;
   padding: 3px 5px;
+
+  @include tablet {
+    border: 2px dotted $tag-border;
+    border-radius: 20px;
+    font-size: $article-tag-font-size * 2;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
   a:link,
   a:visited {
@@ -130,17 +203,34 @@ article {
     overflow: hidden;
     padding: 10px 0;
 
+    @include tablet {
+      border-bottom: 10px double $website-heading-border-color;
+      border-top: 4px solid $website-heading-border-color;
+      margin-bottom: 20px;
+      padding: 20px 0;
+    }
+
     .prev-list::before {
       border-bottom: 5px solid transparent;
       border-right: 5px solid $website-heading-border-color;
       border-top: 5px solid transparent;
       content: '';
       display: inline-block;
+
+      @include tablet {
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid $website-heading-border-color;
+        border-top: 10px solid transparent;
+      }
     }
 
     .prev-list {
       float: left;
       width: 49%;
+
+      @include tablet {
+        font-size: 32px;
+      }
     }
 
     .next-list {
@@ -148,6 +238,11 @@ article {
       float: right;
       text-align: right;
       width: 50%;
+
+      @include tablet {
+        border-left: 2px solid $website-heading-border-color;
+        font-size: 32px;
+      }
     }
 
     .next-list::after {
@@ -156,6 +251,12 @@ article {
       border-top: 5px solid transparent;
       content: '';
       display: inline-block;
+
+      @include tablet {
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid $website-heading-border-color;
+        border-top: 10px solid transparent;
+      }
     }
 
     a {
@@ -176,6 +277,10 @@ article {
     @extend %anchor-color;
     font-variant: small-caps;
     padding: 5px 0;
+
+    @include tablet {
+      font-size: 32px;
+    }
   }
 
   li:last-child {
@@ -192,6 +297,6 @@ article {
 .page-footer {
   @extend %anchor-color;
   font-size: 12px;
-  margin: 5px;
+  margin: $website-margin;
   text-align: center;
 }
