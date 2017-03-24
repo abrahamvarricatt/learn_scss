@@ -1,6 +1,13 @@
 // General stuff (site-wide)
 $website-background-color: #f3f3f3;
 $datetime-color: #099422;
+$website-margin: 10px;
+$website-heading-bottom-padding: 5px;
+$website-heading-font-size: 26px;
+$website-subheading-font-size: 12px;
+$article-heading-font-size: 30px;
+$article-taglist-margin-bottom: 20px;
+$article-tag-font-size: 10px;
 
 // site heading
 $website-heading-color: #3399ff;
@@ -10,6 +17,9 @@ $website-heading-border-color: #6600cc;
 $tag-background: #fff;
 $tag-border: #000;
 
+// Screen sizes
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
 // Extends
 
@@ -28,6 +38,17 @@ $tag-border: #000;
   a:visited {
     border-bottom: 1px solid darken($website-heading-color, 20%);
     color: darken($website-heading-color, 20%);
+  }
+
+}
+
+// Mixins
+
+// For responsive layout
+@mixin tablet {
+
+  @media (min-width: #{$tablet-width}) {
+    @content;
   }
 
 }
